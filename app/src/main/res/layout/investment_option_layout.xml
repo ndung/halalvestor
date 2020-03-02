@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/blue_box"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/logo_hv" />
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_gradient"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="16dp"
+                            android:gravity="center"
+                            android:text="OPSI INVESTASI"
+                            android:textAlignment="center"
+                            android:textColor="#fff"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginTop="16dp"
+                            android:text="Kami memberikan beberapa pilihan investasi yang bisa anda pilih sendiri"
+                            android:textAlignment="center"
+                            android:textColor="#fff"
+                            android:textSize="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round_background_light"
+                            android:orientation="vertical"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:descendantFocusability="blocksDescendants"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:gravity="center"
+                                android:text="Rekomendasi Investasi"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/black"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <android.support.design.widget.TabLayout
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:id="@+id/tabs"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:tabIndicatorHeight="0dp"
+                                    app:elevation="0dp" />
+
+                                <LinearLayout
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="1"
+                                        android:paddingRight="5dp"
+                                        android:text="Investasi per Bulan : " />
+
+                                    <TextView
+                                        android:id="@+id/tv_monthly_investment"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Rp.200.000,-"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:maxLines="1"
+                                    android:paddingTop="16dp"
+                                    android:textColor="@color/colorPrimary"
+                                    android:text="Produk investasi" />
+
+                                <com.github.mikephil.charting.charts.PieChart
+                                    android:id="@+id/chart"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="240dp"/>
+
+                                <TextView
+                                    android:id="@+id/tv_error"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:paddingTop="16dp"
+                                    android:text="Reksadana Saham"
+                                    android:textColor="@color/red"
+                                    android:visibility="gone" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@color/grey"
+                                    android:orientation="horizontal"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginTop="10dp"
+                                    android:gravity="center"
+                                    android:text="Rekomendasi Asuransi"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:gravity="center"
+                                    android:textAlignment="center"
+                                    android:text="Premi Asuransi Kesehatan:"
+                                    android:textColor="@color/greyDark"></TextView>
+
+
+                                <TextView
+                                    android:id="@+id/tv_insurance_recommendation"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:gravity="center"
+                                    android:textAlignment="center"
+                                    android:textStyle="bold"
+                                    android:text="isi ulang kuesioner"
+                                    android:textColor="@color/colorPrimaryDark"></TextView>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@color/grey"
+                                    android:orientation="horizontal"/>
+
+                                <Button
+                                    android:id="@+id/tv_choose"
+                                    android:layout_gravity="center"
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/progress_layout"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginBottom="16dp"
+                                    android:background="@drawable/button_style_default"
+                                    android:text="pilih rekomendasi"
+                                    android:textAllCaps="false"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="14dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="1.5dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:orientation="horizontal"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingTop="16dp">
+
+
+
+                                <TextView
+                                    android:id="@+id/btn_resurvey"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="isi ulang kuesioner"
+                                    android:textColor="@color/colorPrimaryDark"></TextView>
+
+
+                                <ImageView
+                                    android:id="@+id/iv_lihat_petunjuk"
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:paddingLeft="4dp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/blue_dots" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <RelativeLayout
+                    android:id="@+id/rl_container_ketentuan_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/round_background_light_blue">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:padding="16dp">
+
+                                <ImageView
+                                    android:id="@+id/tv_ketentuan_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentTop="true"
+                                    app:srcCompat="@drawable/ic_add_white" />
+
+                                <TextView
+                                    android:id="@+id/iv_toogle_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="Disclaimer"
+                                    android:textColor="#FFF"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_content_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="8dp"
+                                android:visibility="gone">
+
+                                <LinearLayout
+                                    android:id="@+id/ll_line_ketentuan_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginBottom="16dp"
+                                    android:background="@color/colorAccent"
+                                    android:orientation="vertical"></LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/tv_description"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Selamat datang di situs dan aplikasi Halalvestor. Dengan mengakses situs ini maka Anda menyetujui ketentuan dibawah ini:\n\nSegala informasi yang dipublikasikan pada situs atau aplikasi Halalvestor hanya dapat digunakan untuk tujuan informasi dan bukan sebagai saran, rekomendasi atau ajakan untuk menjual atau membeli suatu produk investasi tertentu yang terdapat dalam situs ini. Halalvestor berusaha dengan itikad baik untuk memberikan informasi yang akurat, namun tidak menjamin bahwa informasi yang diberikan adalah tanpa adanya kesalahan, kelalaian, ketidakakuratan teknis atau faktual ataupun kesalahan ketik. Ketentuan ini untuk menegaskan agar tidak dianggap atau seolah-olah agar dianggap sebagai prospektus atau informasi lainnya yang bersifat mengikat. Informasi yang tersedia dalam situs ini tidak dimaksudkan sebagai pengganti suatu informasi produk investasi seperti prospektus dan informasi resmi lainnya, namun semata-mata hanya sebagai informasi tambahan dan pelengkap.\n\nJika Anda memiliki pertanyaan, silakan untuk menghubungi kami di call center kami.\nTerima kasih" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

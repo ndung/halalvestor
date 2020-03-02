@@ -1,0 +1,44 @@
+package id.halalvestor.model;
+
+import java.io.Serializable;
+
+public class Instruction implements Serializable {
+
+    private Integer id;
+    private String subject;
+    private String description;
+    private String picture;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
+
+}

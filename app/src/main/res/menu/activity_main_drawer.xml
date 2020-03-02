@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:id="@+id/home">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@mipmap/ic_home_side"
+            android:title="Dashboard" />
+        <!--item
+            android:id="@+id/nav_history"
+            android:icon="@mipmap/ic_history_side"
+            android:title="Sejarah Transaksi" /-->
+        <item
+            android:id="@+id/nav_portfolio"
+            android:icon="@mipmap/ic_porto_side"
+            android:title="Portfolio" />
+        <item
+            android:id="@+id/nav_progress"
+            android:icon="@mipmap/ic_porto_side"
+            android:title="Progres Investasi" />
+    </group>
+
+    <group android:id="@+id/transaction">
+            <item
+                android:id="@+id/nav_buysell"
+                android:icon="@mipmap/ic_buy_sell_side"
+                android:title="Jual Beli" />
+            <item
+                android:id="@+id/nav_investment"
+                android:icon="@mipmap/ic_invest_side"
+                android:title="Investasi" />
+            <item
+                android:id="@+id/nav_insurance"
+                android:icon="@mipmap/ic_asurance_side"
+                android:title="Asuransi" />
+    </group>
+
+
+    <group android:id="@+id/misc">
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@mipmap/ic_help_side"
+                android:title="Bantuan" />
+            <item
+                android:id="@+id/nav_instruction"
+                android:icon="@mipmap/ic_instruction_side"
+                android:title="Petunjuk" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@mipmap/ic_logout_side"
+                android:title="Log Out" />
+    </group>
+</menu>

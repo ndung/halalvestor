@@ -1,0 +1,430 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_background_light"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:id="@+id/lbl_progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingBottom="16dp"
+                        android:text="Progres Anda"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:id="@+id/wallet_ico"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/lbl_progress"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/time" />
+
+                    <TextView
+                        android:id="@+id/lbl_total_investasi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lbl_progress"
+                        android:layout_toRightOf="@id/wallet_ico"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="4dp"
+                        android:text="Lama investasi:"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tv_investment_goal_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lbl_total_investasi"
+                        android:layout_toRightOf="@id/wallet_ico"
+                        android:paddingLeft="4dp"
+                        android:text="Rp.100.000.000,-"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16dp" />
+
+                    <!--TextView
+                        android:id="@+id/tv_progress_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/tv_progres1"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/circle_bg"
+                        android:gravity="center"
+                        android:text="17%"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="24dp" /-->
+
+                    <LinearLayout
+                        android:id="@+id/layout_progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_investment_goal_time"
+                        android:layout_marginRight="20dp"
+                        android:orientation="vertical"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recycler_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="35dp"
+                                android:clipToPadding="false"
+                                android:orientation="horizontal" />
+
+                            <ProgressBar
+                                android:id="@+id/progressBar"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="35dp"
+                                android:max="100"
+                                android:progress="17"
+                                android:progressDrawable="@drawable/progressbar_custom" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/lbl_progress"
+                        android:background="@drawable/circle_bg"
+                        android:gravity="center"
+                        android:text="17%"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="28dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/progress_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/layout_progress"
+                        android:background="@drawable/round_background_primary_dark"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/triangle_shape"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/triangle"
+                            android:gravity="center_horizontal"
+                            android:rotation="180" />
+
+                        <LinearLayout
+                            android:id="@+id/investment_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical"
+                            android:paddingBottom="16dp"
+                            android:paddingTop="24dp">
+
+                            <TextView
+                                android:id="@+id/lbl_investment_goal_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/triangle_shape"
+                                android:text="Nilai Investasi"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="18dp" />
+
+                            <TextView
+                                android:id="@+id/tv_total_investment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="8dp"
+                                android:text="Rp. 1.023.061"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="1.5dp"
+                                android:background="#FAC32A"
+                                android:orientation="horizontal"></LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_monthly_investment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="8dp"
+                                android:text="Investasi / bulan : Rp 500.000,-"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/progress_layout">
+
+                        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/btn_your_progress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_weight="1"
+                                android:paddingBottom="16dp"
+                                android:paddingTop="16dp"
+                                android:text="lihat progress"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:id="@+id/tv_investment_progress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_weight="1"
+                                android:paddingBottom="16dp"
+                                android:paddingTop="16dp"
+                                android:text="lihat investasi"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16dp" />
+
+                        </LinearLayout>
+
+                        <!--LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="48dp"
+                            android:background="@color/colorPrimaryDark"
+                            android:orientation="horizontal"
+                            android:layout_centerHorizontal="true"></LinearLayout-->
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_jualbeli"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_background_light"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tv_buysell"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dp"
+                        android:text="Tingkatkan nilai investasi anda!"
+                        android:textColor="#333333"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_buysell"
+                        android:text="Beli Produk Investasi"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_toRightOf="@+id/tv_buysell"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/piggy" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_petunjuk"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_gradient"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_petunjuk1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="16dp"
+                        android:text="@string/petunjuk_home_title"
+                        android:textColor="#ffffff"
+                        android:textSize="24dp" />
+
+                    <TextView
+                        android:id="@+id/tv_petunjuk2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_petunjuk1"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="8dp"
+                        android:text="@string/petunjuk_home_desc"
+                        android:textColor="#CFEAF6"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_petunjuk2"
+                        android:orientation="horizontal"
+                        android:paddingBottom="16dp"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="16dp">
+
+                        <TextView
+                            android:id="@+id/tv_lihat_petunjuk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="lihat petunjuk"
+                            android:textColor="#ffffff"
+                            android:textSize="16dp" />
+
+                        <ImageView
+                            android:id="@+id/iv_lihat_petunjuk"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_centerInParent="true"
+                            android:paddingLeft="4dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/white_dots" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_toRightOf="@+id/tv_petunjuk2"
+                        android:paddingBottom="-24dp"
+                        android:paddingRight="-24dp"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/petunjuk" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_bantuan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_background_light_blue"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tv_bantuan1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dp"
+                        android:text="Butuh bantuan?"
+                        android:textColor="@color/primaryLight"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tv_bantuan2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_bantuan1"
+                        android:text="Hubungi Financial Planner"
+                        android:textColor="#ffffff"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_toRightOf="@+id/tv_bantuan1"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/help" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</FrameLayout>

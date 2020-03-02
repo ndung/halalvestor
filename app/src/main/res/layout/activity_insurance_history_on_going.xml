@@ -1,0 +1,800 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/blue_box"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/toolbar_default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="16dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/round_background_light"
+                        android:padding="16dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_product_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Jaga Sehat DBD 3 Bulan"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_order_no"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Order No. 1708250802" />
+
+                            <TextView
+                                android:id="@+id/tv_order_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Waktu Order 01-Sep-2017 | 12:05:12 WIB"
+                                android:textColor="#9e9e9e" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginBottom="16dp"
+                                android:layout_marginTop="16dp"
+                                android:background="@color/colorAccent"
+                                android:orientation="vertical"></LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/layout_progress"
+                                android:layout_marginTop="16dp"
+                                android:background="@drawable/round_background_blue"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center_horizontal"
+                                    android:background="@drawable/triangle"
+                                    android:gravity="center_horizontal"
+                                    android:rotation="180" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="20dp"
+                                    android:orientation="vertical">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical">
+
+                                        <ImageView
+                                            android:id="@+id/iv_investment_manager"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:srcCompat="@mipmap/ic_manager_investasi" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerVertical="true"
+                                            android:layout_toEndOf="@+id/iv_investment_manager"
+                                            android:layout_toRightOf="@+id/iv_investment_manager"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/label_investment_manager"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_toEndOf="@+id/iv_investment_manager"
+                                                android:layout_toRightOf="@+id/iv_investment_manager"
+                                                android:text="Penyedia"
+                                                android:textColor="#9e9e9e"
+                                                android:textSize="12sp" />
+
+                                            <TextView
+                                                android:id="@+id/tv_insurance_manager"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/label_investment_manager"
+                                                android:layout_toEndOf="@+id/iv_investment_manager"
+                                                android:layout_toRightOf="@+id/iv_investment_manager"
+                                                android:text="Jaga Diri Life Insurance" />
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical">
+
+                                        <ImageView
+                                            android:id="@+id/iv_product_type"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:srcCompat="@mipmap/ic_jenis_produk" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerVertical="true"
+                                            android:layout_toEndOf="@+id/iv_product_type"
+                                            android:layout_toRightOf="@+id/iv_product_type"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/label_product_type"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_toEndOf="@+id/iv_product_type"
+                                                android:layout_toRightOf="@+id/iv_product_type"
+                                                android:text="Jenis Produk"
+                                                android:textColor="#9e9e9e"
+                                                android:textSize="12sp" />
+
+                                            <TextView
+                                                android:id="@+id/tv_product_type"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/label_product_type"
+                                                android:layout_toEndOf="@+id/iv_product_type"
+                                                android:layout_toRightOf="@+id/iv_product_type"
+                                                android:text="Asuransi Kesehatan" />
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical">
+
+                                        <ImageView
+                                            android:id="@+id/iv_instruction"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:srcCompat="@mipmap/ic_compensation_hospital" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerVertical="true"
+                                            android:layout_toEndOf="@+id/iv_instruction"
+                                            android:layout_toRightOf="@+id/iv_instruction"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/label_compensation_hospital"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_toEndOf="@+id/iv_instruction"
+                                                android:layout_toRightOf="@+id/iv_instruction"
+                                                android:text="Santunan Rawaat Inap"
+                                                android:textColor="#9e9e9e"
+                                                android:textSize="12sp" />
+
+                                            <TextView
+                                                android:id="@+id/tv_compensation_hospital"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/label_instruction"
+                                                android:layout_toEndOf="@+id/iv_instruction"
+                                                android:layout_toRightOf="@+id/iv_instruction"
+                                                android:text="-" />
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical">
+
+                                        <ImageView
+                                            android:id="@+id/iv_unit"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:srcCompat="@mipmap/ic_compensation_outpatient" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerVertical="true"
+                                            android:layout_toEndOf="@+id/iv_unit"
+                                            android:layout_toRightOf="@+id/iv_unit"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/label_compensation_outpatient"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_toEndOf="@+id/iv_unit"
+                                                android:layout_toRightOf="@+id/iv_unit"
+                                                android:text="Santunan Rawat Jalan"
+                                                android:textColor="#9e9e9e"
+                                                android:textSize="12sp" />
+
+                                            <TextView
+                                                android:id="@+id/tv_compensation_outpatient"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/label_unit"
+                                                android:layout_toEndOf="@+id/iv_unit"
+                                                android:layout_toRightOf="@+id/iv_unit"
+                                                android:text="-" />
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical">
+
+                                        <ImageView
+                                            android:id="@+id/iv_net_amount"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:srcCompat="@mipmap/ic_compensation_of_death" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerVertical="true"
+                                            android:layout_toEndOf="@+id/iv_net_amount"
+                                            android:layout_toRightOf="@+id/iv_net_amount"
+                                            android:orientation="vertical"
+                                            android:id="@+id/linearLayout">
+
+                                            <TextView
+                                                android:id="@+id/label_compensation_of_death"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_toEndOf="@+id/iv_net_amount"
+                                                android:layout_toRightOf="@+id/iv_net_amount"
+                                                android:text="Santunan Kematian"
+                                                android:textColor="#9e9e9e"
+                                                android:textSize="12sp" />
+
+                                            <TextView
+                                                android:id="@+id/tv_compensation_of_death"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignBottom="@+id/linearLayout"
+                                                android:layout_toEndOf="@+id/iv_net_amount"
+                                                android:layout_toRightOf="@+id/iv_net_amount"
+                                                android:text="IDR 2.000.000,- " />
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical">
+
+                                        <ImageView
+                                            android:id="@+id/iv_buying_price"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:srcCompat="@mipmap/ic_premi_price" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerVertical="true"
+                                            android:layout_toEndOf="@+id/iv_buying_price"
+                                            android:layout_toRightOf="@+id/iv_buying_price"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/label_premi_price"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_toEndOf="@+id/iv_buying_price"
+                                                android:layout_toRightOf="@+id/iv_buying_price"
+                                                android:text="Harga Premi"
+                                                android:textColor="#9e9e9e"
+                                                android:textSize="12sp" />
+
+                                            <TextView
+                                                android:id="@+id/tv_premi_price"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/label_buying_price"
+                                                android:layout_toEndOf="@+id/iv_buying_price"
+                                                android:layout_toRightOf="@+id/iv_buying_price"
+                                                android:text="IDR 3.500,-" />
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical">
+
+                                        <ImageView
+                                            android:id="@+id/iv_transfer"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:srcCompat="@mipmap/ic_transfer_insurance" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerVertical="true"
+                                            android:layout_toEndOf="@+id/iv_transfer"
+                                            android:layout_toRightOf="@+id/iv_transfer"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/label_transfer"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_toEndOf="@+id/tv_transfer"
+                                                android:layout_toRightOf="@+id/tv_transfer"
+                                                android:text="Tujuan Rekening Transfer"
+                                                android:textColor="#9e9e9e"
+                                                android:textSize="12sp" />
+
+                                            <TextView
+                                                android:id="@+id/tv_transfer"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/label_net_amount"
+                                                android:layout_toEndOf="@+id/iv_transfer"
+                                                android:layout_toRightOf="@+id/iv_net_amount"
+                                                android:text="Tujuan" />
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/label_buying_amount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:text="Total Pembelian"
+                                android:textAlignment="center"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tv_buying_amount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="IDR 1.000.000,-"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="24sp" />
+
+                            <TextView
+                                android:id="@+id/label_status"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:text="Status"
+                                android:textAlignment="center"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_status"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="on going"
+                                android:textAlignment="center" />
+
+                            <Button
+                                android:id="@+id/btn_download"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|center_horizontal"
+                                android:layout_marginBottom="16dp"
+                                android:layout_marginTop="16dp"
+                                android:background="@drawable/button_style_default"
+                                android:padding="16dp"
+                                android:text="download PDF"
+                                android:textColor="#FFF" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/round_background_light"
+                        android:padding="16dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_payment_info"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Informasi Pembayaran"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginBottom="16dp"
+                                android:layout_marginTop="16dp"
+                                android:background="@color/colorAccent"
+                                android:orientation="vertical"></LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Mohon lakukan 2 langkah di bawah ini untuk menyelesaikan transaksi" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/layout_progress"
+                                android:layout_marginTop="16dp"
+                                android:background="@drawable/bg_gradient"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center_horizontal"
+                                    android:background="@drawable/triangle"
+                                    android:gravity="center_horizontal"
+                                    android:rotation="180" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="20dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="LANGKAH 1"
+                                        android:textAlignment="center"
+                                        android:textColor="#FFF" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Segera transfer dana sejumlah total pembelian ke rekening berikut "
+                                        android:textAlignment="center"
+                                        android:textColor="#DDD" />
+
+                                    <TextView
+                                        android:id="@+id/tv_bank_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="Bank BCA"
+                                        android:textAlignment="center"
+                                        android:textColor="#FFF" />
+
+                                    <TextView
+                                        android:id="@+id/tv_account_number"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="229 3811 555"
+                                        android:textAlignment="center"
+                                        android:textColor="#FFF"
+                                        android:textSize="24sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/tv_beneficiary_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="a.n. MIKU Ardana Sejahtera"
+                                        android:textAlignment="center"
+                                        android:textColor="#FFF" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@color/primaryLight"
+                                        android:orientation="vertical"></LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="Harap mencantukan berita acara"
+                                        android:textAlignment="center"
+                                        android:textColor="#DDD" />
+
+                                    <TextView
+                                        android:id="@+id/tv_order_number"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="170208250802"
+                                        android:textAlignment="center"
+                                        android:textColor="#FFF"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/layout_progress"
+                                android:layout_marginTop="16dp"
+                                android:background="@drawable/bg_gradient"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center_horizontal"
+                                    android:background="@drawable/triangle"
+                                    android:gravity="center_horizontal"
+                                    android:rotation="180" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="20dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="LANGKAH 2"
+                                        android:textAlignment="center"
+                                        android:textColor="#FFF" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Scan/foto bukti transfer pembayaran dan dikirimkan kepada kami melaui"
+                                        android:textAlignment="center"
+                                        android:textColor="#DDD" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:textAlignment="center"
+                                        android:textColor="#FFF"
+                                        android:visibility="gone" />
+
+                                    <TextView
+                                        android:id="@+id/tv_email"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Konfirmasi Pembayaran"
+                                        android:textAlignment="center"
+                                        android:textColor="#FFF"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@color/primaryLight"
+                                        android:orientation="vertical"></LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="Cantumkan subjek email"
+                                        android:textAlignment="center"
+                                        android:textColor="#DDD" />
+
+                                    <TextView
+                                        android:id="@+id/tv_attach"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="bukti transfer ( ID Pesanan )"
+                                        android:textAlignment="center"
+                                        android:textColor="#FFF"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_container_ketentuan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/round_background_light_blue">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical|center_horizontal"
+                                    android:padding="16dp">
+
+                                    <ImageView
+                                        android:id="@+id/tv_ketentuan"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_alignParentTop="true"
+                                        app:srcCompat="@drawable/ic_add_white" />
+
+                                    <TextView
+                                        android:id="@+id/iv_toogle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_centerVertical="true"
+                                        android:text="Ketentuan Penting"
+                                        android:textColor="#FFF"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_content"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:padding="16dp"
+                                    android:visibility="gone">
+
+                                    <LinearLayout
+                                        android:id="@+id/ll_line_ketentuan"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginBottom="16dp"
+                                        android:background="@color/colorAccent"
+                                        android:orientation="vertical"></LinearLayout>
+
+                                    <TextView
+                                        android:id="@+id/tv_desc"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_below="@+id/layout_progress"
+                                        android:layout_marginTop="16dp"
+                                        android:background="@drawable/bg_gradient"
+                                        android:orientation="vertical"
+                                        android:visibility="visible">
+
+                                        <RelativeLayout
+                                            android:layout_width="50dp"
+                                            android:layout_height="50dp"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_gravity="center_horizontal"
+                                            android:background="@drawable/triangle"
+                                            android:gravity="center_horizontal"
+                                            android:rotation="180" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:layout_margin="20dp"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/tv_description"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                                android:textAlignment="viewStart"
+                                                android:layout_gravity="start"
+                                                android:textColor="#FFF" />
+
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/bt_done"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:background="@drawable/round_background_primary"
+                        android:text="selesai"
+                        android:layout_marginBottom="16dp"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+
+</FrameLayout>

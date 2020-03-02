@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/blue_box"
+        android:orientation="vertical"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/toolbar_default"/>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/round_background_primary_dark"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/textView44"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.7"
+                            android:text="Kami mohon kesediaan anda untuk mengisi pertanyaan dibawah tentang kondisi kesehatan anda sebagai dasar pertambangan kami akan pengajuan produk asuransi anda."
+                            android:textColor="@color/white" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="16dp"
+                            android:background="@drawable/round_background_light"
+                            android:orientation="vertical"
+                            android:descendantFocusability="blocksDescendants"
+                            android:padding="5dp">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/rv_question"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="5dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <CheckBox
+                        android:id="@+id/cb_term_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="top"
+                        android:text="Saya menyatakan bahwa pernyataan di atas saya buat denga sadar dan setiap keterangna di atas adalah benar. Saya memahami bawhwa setiap keterangan tersebut merupakan dsar dan tidak terpisahkan dari Polis. Oleh karenanya saya mengerti bahwa pertanggunanga yang diminta ini baru berlaku setelah mendapat persetujuan dan diterbitkannya polis. Apabila di kemudian hari diketahui bahwa keterangan yang diberikan tidak benar maka tidak berkewajiban membayar klain asuransi yang diajukan oleh permohonan ini dan berhak membatalkan polis dan saya tidak akan melakukan tuntutan dalam bentuk apapun di kemudian hari."
+                        android:textColor="#6e6e6e" />
+
+                    <CheckBox
+                        android:id="@+id/cb_term_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="top"
+                        android:text="Saya mengyatakan bahwa Formuli ini berlaku untuk seluruh calon Tertanggung yang didaftarkan oleh calon Pemegang Polis"
+                        android:textColor="#6e6e6e" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp">
+
+                    <Button
+                        android:id="@+id/bt_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/round_background_primary"
+                        android:text="KEMBALI"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/bt_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/round_background_primary"
+                        android:text="LANJUT"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

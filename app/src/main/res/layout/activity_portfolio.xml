@@ -1,0 +1,541 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@drawable/blue_box"
+            android:orientation="vertical"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/iv_finish"
+                    android:layout_width="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_height="24dp"
+                    app:srcCompat="@drawable/ic_back" />
+
+                <ImageView
+                    android:id="@+id/iv_search_toolbar"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/iv_sort_toolbar"
+                    android:layout_toStartOf="@+id/iv_sort_toolbar"
+                    app:srcCompat="@mipmap/ic_search_toolbar" />
+
+                <ImageView
+                    android:id="@+id/iv_sort_toolbar"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    app:srcCompat="@mipmap/ic_sort_toolbar" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toEndOf="@+id/iv_finish"
+                    android:layout_toRightOf="@+id/iv_finish"
+                    android:layout_weight="1"
+                    android:paddingLeft="6dp"
+                    android:text="Toolbar"
+                    android:textAlignment="viewStart"
+                    android:gravity="start"
+                    android:textAllCaps="true"
+                    android:textColor="#FFF"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/layout_progress"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:background="@drawable/round_background_primary_dark"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/ll_add_porto"
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="+ Tambah Portofoliomu"
+                                    android:textColor="#ffffff"
+                                    android:textSize="16dp" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:background="@drawable/round_background_light"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/round_background_head"
+                                android:orientation="horizontal"
+                                android:padding="16dp"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Portfolio"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="20sp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_search"
+                                    android:layout_width="20dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/ic_search" />
+
+                                <ImageView
+                                    android:id="@+id/iv_sort"
+                                    android:layout_width="20dp"
+                                    android:layout_height="wrap_content"
+                                    app:srcCompat="@drawable/ic_sort" />
+
+                            </LinearLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp">
+
+                                <LinearLayout
+                                    android:id="@+id/ll_more"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:gravity="center_vertical|center_horizontal"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/iv_indicator_left"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="1"
+                                        app:srcCompat="@drawable/indicator_table_left" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_indicator_1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="3dp"
+                                        android:layout_weight="1"
+                                        app:srcCompat="@drawable/ellipse_primary_dark" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_indicator_2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="3dp"
+                                        android:layout_weight="1"
+                                        app:srcCompat="@drawable/ellipse_primary_dark" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_indicator_3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="3dp"
+                                        android:layout_weight="1"
+                                        app:srcCompat="@drawable/ellipse_primary_light" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_indicator_4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="3dp"
+                                        android:layout_weight="1"
+                                        app:srcCompat="@drawable/ellipse_primary_light" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_indicator_5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="3dp"
+                                        android:layout_weight="1"
+                                        app:srcCompat="@drawable/ellipse_primary_light" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_indicator_right"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_weight="1"
+                                        app:srcCompat="@drawable/indicator_table_right" />
+                                </LinearLayout>
+
+                                <!--TextView
+                                    android:id="@+id/textView32"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="info produk selengkapnya"
+                                    android:textColor="@color/colorPrimary" /-->
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <!--android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp" /-->
+
+                                <ScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <RelativeLayout
+                                        android:id="@+id/fillable_area"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal">
+
+                                        <TableLayout
+                                            android:id="@+id/fixed_column1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_alignParentLeft="true" />
+
+                                        <HorizontalScrollView
+                                            android:id="@+id/hs_table_item"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_toLeftOf="@+id/fixed_column2"
+                                            android:layout_toRightOf="@+id/fixed_column1">
+
+                                            <TableLayout
+                                                android:id="@+id/scrollable_part"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent" />
+
+                                        </HorizontalScrollView>
+
+                                        <TableLayout
+                                            android:id="@+id/fixed_column2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentRight="true" />
+                                    </RelativeLayout>
+
+                                </ScrollView>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/layout_progress"
+                                    android:layout_margin="8dp"
+                                    android:background="@drawable/round_background_primary_dark"
+                                    android:orientation="vertical">
+
+                                    <RelativeLayout
+                                        android:id="@+id/triangle_shape"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_gravity="center_horizontal"
+                                        android:background="@drawable/triangle"
+                                        android:gravity="center_horizontal"
+                                        android:rotation="180" />
+
+                                    <LinearLayout
+                                        android:id="@+id/ll_portfolio"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="16dp"
+
+                                        android:orientation="vertical"
+                                        android:padding="16dp">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:paddingBottom="16dp"
+                                            android:text="Nilai Investasi Anda"
+                                            android:textColor="#ffffff"
+                                            android:textSize="16dp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_total_investment"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Rp. 1.023.061"
+                                            android:textAlignment="center"
+                                            android:textColor="#ffffff"
+                                            android:textSize="30sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/tv_last_update_investment"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:paddingBottom="16dp"
+                                            android:text="per tanggal 9 agustus 2017"
+                                            android:textAlignment="center"
+                                            android:textColor="#ffffff" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1.5dp"
+                                            android:background="#FAC32A"
+                                            android:orientation="horizontal"></LinearLayout>
+
+                                        <TextView
+                                            android:id="@+id/tv_monthly_investment"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:padding="8dp"
+                                            android:text="Investasi per bulan : Rp 500.000,-"
+                                            android:textAlignment="center"
+                                            android:textColor="#ffffff"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/tv_portfolio_growth"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:paddingBottom="8dp"
+                                            android:text="Total pertumbuhan investasi : 0%"
+                                            android:textAlignment="center"
+                                            android:textColor="#ffffff"
+                                            android:textSize="14dp" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1.5dp"
+                                            android:background="#FAC32A"
+                                            android:orientation="horizontal"></LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/ll_evaluasi_invest"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/layout_evaluation"
+                                            android:orientation="horizontal"
+                                            android:paddingTop="16dp">
+
+                                            <TextView
+                                                android:id="@+id/tv_investment_evaluation"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="evaluasi investasi anda"
+                                                android:textColor="#ffffff" />
+
+                                            <ImageView
+                                                android:id="@+id/iv_investment_evaluation"
+                                                android:layout_width="16dp"
+                                                android:layout_height="16dp"
+                                                android:layout_centerInParent="true"
+                                                android:paddingLeft="4dp"
+                                                android:scaleType="fitCenter"
+                                                android:src="@drawable/white_dots" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="16dp"
+                            android:orientation="vertical"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_gradient_90"
+                                android:padding="16dp">
+
+                                <TextView
+                                    android:id="@+id/lbl_progress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingBottom="4dp"
+                                    android:text="@string/you_are_on_your_way"
+                                    android:textAlignment="center"
+                                    android:textColor="#fff" />
+
+                                <TextView
+                                    android:id="@+id/pertahankan_investasi_anda"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/lbl_progress"
+                                    android:text="@string/pertahankan_investasi_anda"
+                                    android:textAlignment="center"
+                                    android:textColor="#fff" />
+
+                                <LinearLayout
+                                    android:id="@+id/line"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1.5dp"
+                                    android:layout_below="@+id/pertahankan_investasi_anda"
+                                    android:layout_marginBottom="16dp"
+                                    android:layout_marginTop="8dp"
+                                    android:background="@color/white"
+                                    android:orientation="horizontal"></LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/progres_investasi_anda"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/line"
+                                    android:layout_marginBottom="16dp"
+                                    android:gravity="start"
+                                    android:text="@string/progres_investasi_anda"
+                                    android:textAlignment="textStart"
+                                    android:textColor="#fff" />
+
+
+                                <LinearLayout
+                                    android:id="@+id/layout_progress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/progres_investasi_anda"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_marginTop="16dp"
+                                    android:orientation="vertical">
+
+                                    <ProgressBar
+                                        android:id="@+id/progressBar"
+                                        style="?android:attr/progressBarStyleHorizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="35dp"
+                                        android:max="100"
+                                        android:progress="20"
+                                        android:progressDrawable="@drawable/progressbar_custom_primary" />
+
+                                    <android.support.v7.widget.RecyclerView
+                                        android:id="@+id/recycler_view"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="-8dp"
+                                        android:clipToPadding="false"
+                                        android:orientation="horizontal" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/tv_progress"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_below="@+id/line"
+                                    android:background="@drawable/circle_bg_white"
+                                    android:gravity="center"
+                                    android:text="17%"
+                                    android:textColor="#fff"
+                                    android:textSize="28sp" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/layout_progress"
+                                    android:orientation="horizontal"
+                                    android:paddingTop="16dp">
+
+                                    <TextView
+                                        android:id="@+id/tv_investment_progress"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="lihat progres anda"
+                                        android:textColor="#ffffff" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_investment_progress"
+                                        android:layout_width="16dp"
+                                        android:layout_height="16dp"
+                                        android:layout_centerInParent="true"
+                                        android:paddingLeft="4dp"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/white_dots" />
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </android.support.v4.widget.NestedScrollView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</FrameLayout>

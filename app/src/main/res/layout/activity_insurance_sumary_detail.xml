@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/blue_box"
+        android:orientation="vertical"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/toolbar_default"/>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/round_background_light"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:id="@+id/tv_insurance_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:text="Jaga Sehat Plus Plan"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="20sp" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/layout_progress"
+                                android:layout_marginBottom="16dp"
+                                android:layout_marginTop="16dp"
+                                android:background="@drawable/round_background_blue"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:id="@+id/triangle_shape"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center_horizontal"
+                                    android:background="@drawable/triangle"
+                                    android:gravity="center_horizontal"
+                                    android:rotation="180" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="20dp"
+                                    android:orientation="vertical">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical">
+
+                                        <ImageView
+                                            android:id="@+id/iv_gender"
+                                            android:layout_width="36dp"
+                                            android:layout_height="36dp"
+                                            android:layout_alignParentBottom="true"
+                                            android:layout_alignParentLeft="true"
+                                            android:layout_alignParentStart="true"
+                                            android:padding="6dp"
+                                            app:srcCompat="@drawable/ic_gender" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerVertical="true"
+                                            android:layout_toEndOf="@+id/iv_gender"
+                                            android:layout_toRightOf="@+id/iv_gender"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/label_gender"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_toEndOf="@+id/iv_gender"
+                                                android:layout_toRightOf="@+id/iv_gender"
+                                                android:text="Jenis Kelamin"
+                                                android:textColor="#9e9e9e"
+                                                android:textSize="12sp" />
+
+                                            <TextView
+                                                android:id="@+id/tv_gender"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/label_gender"
+                                                android:layout_toEndOf="@+id/iv_gender"
+                                                android:layout_toRightOf="@+id/iv_gender"
+                                                android:text="Pria" />
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical">
+
+                                        <ImageView
+                                            android:id="@+id/iv_age"
+                                            android:layout_width="36dp"
+                                            android:layout_height="36dp"
+                                            android:padding="6dp"
+                                            app:srcCompat="@drawable/ic_age" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerVertical="true"
+                                            android:layout_toEndOf="@+id/iv_age"
+                                            android:layout_toRightOf="@+id/iv_age"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/label_age"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_toEndOf="@+id/iv_age"
+                                                android:layout_toRightOf="@+id/iv_age"
+                                                android:text="Umur"
+                                                android:textColor="#9e9e9e"
+                                                android:textSize="12sp" />
+
+                                            <TextView
+                                                android:id="@+id/tv_age"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/label_age"
+                                                android:layout_toEndOf="@+id/iv_age"
+                                                android:layout_toRightOf="@+id/iv_age"
+                                                android:text="22 tahun" />
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical">
+
+                                        <ImageView
+                                            android:id="@+id/iv_frequency_type"
+                                            android:layout_width="36dp"
+                                            android:layout_height="36dp"
+                                            android:padding="6dp"
+                                            app:srcCompat="@drawable/ic_search_premi" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerVertical="true"
+                                            android:layout_toEndOf="@+id/iv_frequency_type"
+                                            android:layout_toRightOf="@+id/iv_frequency_type"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/label_frequency_type"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_toEndOf="@+id/iv_frequency_type"
+                                                android:layout_toRightOf="@+id/iv_frequency_type"
+                                                android:text="Tipe Pencarian"
+                                                android:textColor="#9e9e9e"
+                                                android:textSize="12sp" />
+
+                                            <TextView
+                                                android:id="@+id/tv_frequency_type"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/label_frequency_type"
+                                                android:layout_toEndOf="@+id/iv_frequency_type"
+                                                android:layout_toRightOf="@+id/iv_frequency_type"
+                                                android:text="Premi Bulanan" />
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical">
+
+                                        <ImageView
+                                            android:id="@+id/iv_provider"
+                                            android:layout_width="36dp"
+                                            android:layout_height="wrap_content"
+                                            app:srcCompat="@mipmap/ic_manager_investasi" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerVertical="true"
+                                            android:layout_toEndOf="@+id/iv_provider"
+                                            android:layout_toRightOf="@+id/iv_provider"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/label_provider"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_toEndOf="@+id/iv_provider"
+                                                android:layout_toRightOf="@+id/iv_provider"
+                                                android:text="Penyedia"
+                                                android:textColor="#9e9e9e"
+                                                android:textSize="12sp" />
+
+                                            <TextView
+                                                android:id="@+id/tv_provider"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/label_provider"
+                                                android:layout_toEndOf="@+id/iv_provider"
+                                                android:layout_toRightOf="@+id/iv_provider"
+                                                android:text="Jaga Diri" />
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical">
+
+                                        <ImageView
+                                            android:id="@+id/iv_payment_type"
+                                            android:layout_width="36dp"
+                                            android:layout_height="wrap_content"
+                                            android:padding="6dp"
+                                            app:srcCompat="@drawable/ic_payment" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerVertical="true"
+                                            android:layout_toEndOf="@+id/iv_payment_type"
+                                            android:layout_toRightOf="@+id/iv_payment_type"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/label_payment_type"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_toEndOf="@+id/iv_payment_type"
+                                                android:layout_toRightOf="@+id/iv_payment_type"
+                                                android:text="Pembayaran"
+                                                android:textColor="#9e9e9e"
+                                                android:textSize="12sp" />
+
+                                            <TextView
+                                                android:id="@+id/tv_payment_type"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/label_payment_type"
+                                                android:layout_toEndOf="@+id/iv_payment_type"
+                                                android:layout_toRightOf="@+id/iv_payment_type"
+                                                android:text="Bulanan(IDR)" />
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Premi"
+                                    android:textColor="@color/primary_text" />
+
+                                <TextView
+                                    android:id="@+id/tv_amount_premi"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="117,600"
+                                    android:layout_gravity="end"
+                                    android:textAlignment="textEnd"
+                                    android:textColor="@color/primary_text" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Biaya Admin"
+                                    android:textColor="@color/primary_text" />
+
+                                <TextView
+                                    android:id="@+id/tv_amount_adm"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="0"
+                                    android:layout_gravity="end"
+                                    android:textAlignment="textEnd"
+                                    android:textColor="@color/primary_text" />
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@color/colorPrimary"
+                                android:orientation="vertical"></LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Total Pembelian"
+                                    android:textColor="@color/primary_text"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_amount_total"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="117,600"
+                                    android:gravity="end"
+                                    android:textAlignment="textEnd"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/bt_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/round_background_primary"
+                            android:text="KEMBALI"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/bt_next"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/round_background_primary"
+                            android:text="LANJUT"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>
